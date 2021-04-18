@@ -75,14 +75,13 @@ h1{
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
-    
+    padding: 40px 0;
 }
 .col-50{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 550px;
     padding: 100px 0;
 }
 .col-40{
@@ -193,8 +192,57 @@ li{
     color: white;
     cursor: pointer;
 }
-.btn-story:focus, .btn-prc:focus, form button{
+.btn-story:focus, .btn-prc:focus, form button, input{
     outline: none;
+}
+.round-guy{
+    width: 107px;
+    height: 107px;
+    border-radius: 100%;
+    background-image: url(images/guy.png);
+    background-repeat: no-repeat;
+    background-position: -70px -5px;
+    position: absolute;
+    top: 30px;
+    left: 430px;
+    box-shadow: 0 0 10px rgb(197, 185, 161);
+}
+.round-girl{
+    width: 107px;
+    height: 107px;
+    border-radius: 100%;
+    background-image: url(images/girl.png);
+    background-repeat: no-repeat;
+    background-position: -10px -5px;
+    box-shadow: 0 0 10px rgb(197, 185, 161);
+    position: absolute;
+    top: 20px;
+    left: 430px;
+}
+.answer{
+    padding: 25px 70px 25px 25px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.answer-beige{
+    padding: 25px 70px 25px 25px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(227, 213, 184);
+}
+.answer p, .answer-beige p{
+    padding: 10px;
+}
+.copyright{
+    width: 60%;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9em;
 }
 /*---------------------------------------------------------adaptive---------------------------------------------------------*/
 /*desktop*/
@@ -213,11 +261,12 @@ li{
         margin: auto;
         overflow-x: auto;
     }
-    .col-3{
+    .col-3, .col-33{
         width: 50%;
     }
     .row{
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 /*tablet*/
@@ -238,8 +287,8 @@ li{
         margin: auto;
         overflow-x: auto;
     }
-    .col-40, .col-60{
-        width: 100%;
+    .col-40, .col-60, .col-50, .col-55{
+        width: 90%;
         text-align: center;
     }
     form{
@@ -247,8 +296,9 @@ li{
         position: static;
         margin: auto;
     }
-    .col-3{
-        width: 100%;
+    .col-3, .col-33{
+        width: 70%;
+        margin: auto;
     }
 }
 /*mobile*/
@@ -268,7 +318,7 @@ li{
         margin: auto;
         overflow-x: auto;
     }
-    .col-40, .col-60{
+    .col-40, .col-60, .col-50, .col-55{
         width: 100%;
         text-align: center;
     }
@@ -276,7 +326,7 @@ li{
         width: 100%;
         position: static;
     }
-    .col-3{
+    .col-3, .col-33{
         width: 100%;
     }
 } 
