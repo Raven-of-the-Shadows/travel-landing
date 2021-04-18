@@ -16,7 +16,7 @@ a{
 }
 p{
     font-size: 0.9em;
-    padding: 30px 0;
+    padding: 40px 0 20px 0;
 }
 .container{
     width: 1012px;
@@ -130,11 +130,13 @@ form button{
 input:focus{
     outline: none;
 }
-
+#about, #services{
+    padding: 40px 0 0 0;
+}
 h2{
     font-size: 40pt;
     font-weight: 600;
-    padding: 40px 0 ;
+    padding: 20px 0 ;
 }
 .col-3{
     width: 18%;
@@ -156,19 +158,43 @@ h2{
     border-radius: 10px;
     font-weight: 600;
 }
+.btn-story:hover, form button{
+    cursor: pointer;
+}
 #services{
     background-color: rgb(227, 213, 184);
     text-align: center;
 }
 .col-33{
     width: 33%;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
+    margin: 20px 10px 0 10px;
     background-color: white;
     text-align: center;
+    border-radius: 10px;
 }
 li{
     padding: 5px;
     font-size: 0.8em;
+}
+.btn-prc{
+    background-color: rgb(227, 213, 184);
+    color: black;
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid rgb(227, 213, 184);
+    border-radius: 10px;
+    font-weight: 600;
+    width: 70%;
+}
+.btn-prc:hover{
+    background-color: rgb(208, 57, 88);
+    border: 1px solid rgb(208, 57, 88);
+    color: white;
+    cursor: pointer;
+}
+.btn-story:focus, .btn-prc:focus, form button{
+    outline: none;
 }
 /*---------------------------------------------------------adaptive---------------------------------------------------------*/
 /*desktop*/
