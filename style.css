@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'PTSerif', sans-serif;
+    font-family: 'PTSerif Regular', sans-serif;
     font-size: 16pt;
     z-index: 1000;
 }
@@ -14,7 +14,10 @@ a{
     text-decoration: none;
     color: black;
 }
-
+p{
+    font-size: 0.9em;
+    padding: 30px 0;
+}
 .container{
     width: 1012px;
     margin: auto;
@@ -57,6 +60,10 @@ header{
     flex-direction: row;
     justify-content: space-between;
 }
+.row-left{
+    display: flex;
+    flex-direction: row;
+}
 /*---------------------------------------------------------main---------------------------------------------------------*/
 h1{
     font-size: 60pt;
@@ -70,7 +77,7 @@ h1{
     background-position: center;
     
 }
-.col-60{
+.col-50{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -81,6 +88,9 @@ h1{
 .col-40{
     width: 40%;
     position: relative;
+}
+.col-55{
+    width: 55%;
 }
 .pink{
     color: rgb(208, 57, 88);
@@ -120,6 +130,46 @@ form button{
 input:focus{
     outline: none;
 }
+
+h2{
+    font-size: 40pt;
+    font-weight: 600;
+    padding: 40px 0 ;
+}
+.col-3{
+    width: 18%;
+    margin: 50px 0;
+    text-align: center;
+}
+.story{
+    background-color: rgb(208, 57, 88);
+    color: white;
+}
+.btn-story{
+    background-color: rgb(227, 213, 184);
+    color: black;
+    padding: 20px;
+    width: 270px;
+    margin: 30px;
+    font-size: 0.9em;
+    border: 1px solid rgb(227, 213, 184);
+    border-radius: 10px;
+    font-weight: 600;
+}
+#services{
+    background-color: rgb(227, 213, 184);
+    text-align: center;
+}
+.col-33{
+    width: 33%;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+li{
+    padding: 5px;
+    font-size: 0.8em;
+}
 /*---------------------------------------------------------adaptive---------------------------------------------------------*/
 /*desktop*/
 @media(min-width:1200px){
@@ -137,6 +187,12 @@ input:focus{
         margin: auto;
         overflow-x: auto;
     }
+    .col-3{
+        width: 50%;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
 }
 /*tablet*/
 @media(max-width:768px){
@@ -146,6 +202,8 @@ input:focus{
     .row{
         display: flex;
         flex-direction: column;
+
+        justify-content: center;
     }
     .logo{
         margin: auto;
@@ -163,6 +221,9 @@ input:focus{
         position: static;
         margin: auto;
     }
+    .col-3{
+        width: 100%;
+    }
 }
 /*mobile*/
 @media(max-width:667px){
@@ -172,6 +233,7 @@ input:focus{
     .row{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     .logo{
         margin: auto;
@@ -187,5 +249,8 @@ input:focus{
     form{
         width: 100%;
         position: static;
+    }
+    .col-3{
+        width: 100%;
     }
 } 
