@@ -46,7 +46,7 @@ header{
     font-size: 14pt;
     font-weight: 600;
 }
-.menu a:hover{
+.menu a:hover, .menu a:active, .current a{
     color: white;
     border: 1px solid rgb(208, 57, 88);
     border-radius: 10px;
