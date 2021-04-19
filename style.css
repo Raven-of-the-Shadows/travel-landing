@@ -126,6 +126,32 @@ form button{
     font-size: 0.9em; 
     color: white;
 }
+#accept{
+    display: none;
+}
+#accept+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+label::before{
+    content: '';
+    width: 0.7em;
+    height: 0.7em;
+    margin: 15px 28px;
+    border: 1px solid white;
+    border-radius: 3px;
+    display: inline-block;
+    background-color: white;
+}
+#accept:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #929292;
+  }
+#accept:checked+label::before {
+    border-color: #929292;
+    background-color: #929292;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
 input:focus{
     outline: none;
 }
